@@ -8,27 +8,105 @@ z2
 !i10f 100
 cModel Technology
 Z0 dS:/hdl2/blink/sim/script
-Eblink
-Z1 w1503950922
+Eadderbehave
+Z1 w1504229627
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/HDL/lab1/FullAdderBeh/sim/script
+Z5 8../../src/adderBehave.vhd
+Z6 F../../src/adderBehave.vhd
+l0
+L8
+VzoknBWak_9hIcW:KFBZo<3
+!s100 [`>BYBDD<9DUh2W=SlAYT0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1504235949
+!i10b 1
+Z9 !s108 1504235949.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|../../src/adderBehave.vhd|
+Z11 !s107 ../../src/adderBehave.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+DEx4 work 11 adderbehave 0 22 zoknBWak_9hIcW:KFBZo<3
+l19
+L18
+Vl:?`og>[B7Qm@3HeYC5@^0
+!s100 :B>?S50S@EB;1dYfiNhJ@2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadderbehave_tb
+Z14 w1504235752
+R2
+R3
+R4
+Z15 8../src/adderBehave_tb.vhd
+Z16 F../src/adderBehave_tb.vhd
+l0
+L8
+VV5b7cY^CDo4elb:3<1Q?O0
+!s100 02dGJ5SKdGa4K:]hS<Yoe3
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|../src/adderBehave_tb.vhd|
+Z18 !s107 ../src/adderBehave_tb.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+Z19 DEx4 work 14 adderbehave_tb 0 22 V5b7cY^CDo4elb:3<1Q?O0
+l30
+L11
+Z20 V:[F`3NTbKTkIU>85:zY0D3
+Z21 !s100 49Olg2BW:R1eT<B2=a34J3
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eblink
+Z22 w1503950922
+R2
+R3
 R0
-Z4 8../../src/blink.vhd
-Z5 F../../src/blink.vhd
+Z23 8../../src/blink.vhd
+Z24 F../../src/blink.vhd
 l0
 L8
 VgSbeDC?JAd;]:HFX73TlZ1
 !s100 Q@N>i]_LJ6WJS3Gg1AeaQ1
-Z6 OP;C;10.6c;65
+Z25 OP;C;10.6c;65
 31
-Z7 !s110 1504192922
+Z26 !s110 1504192922
 !i10b 1
-Z8 !s108 1504192922.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|../../src/blink.vhd|
-Z10 !s107 ../../src/blink.vhd|
+Z27 !s108 1504192922.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|../../src/blink.vhd|
+Z29 !s107 ../../src/blink.vhd|
 !i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1 CvgOpt 0
+R12
+R13
 Abeh
 R2
 R3
@@ -37,37 +115,37 @@ l24
 L19
 VP23a4Dd3i:B_KMcmjUBQW2
 !s100 XaK8X88lIl<AKz91bLI_I0
-R6
+R25
 31
-R7
+R26
 !i10b 1
-R8
-R9
-R10
+R27
+R28
+R29
 !i113 1
-R11
 R12
+R13
 Eblink_tb
-R1
+Z30 w1504235266
 R2
 R3
-R0
-Z13 8../src/blink_tb.vhd
-Z14 F../src/blink_tb.vhd
+R4
+R15
+R16
 l0
 L8
 VaHa@?Cg=6RA0<[l9m10=d3
 !s100 4fz^0J8zCXK72OnVz_Qoz0
-R6
-31
 R7
+31
+!s110 1504235378
 !i10b 1
-R8
-Z15 !s90 -reportprogress|300|-93|-work|work|../src/blink_tb.vhd|
-!s107 ../src/blink_tb.vhd|
+!s108 1504235378.000000
+R17
+R18
 !i113 1
-R11
 R12
+R13
 Aarch
 R2
 R3
@@ -76,13 +154,16 @@ l29
 L11
 VL;KInh4cKG[4HBA34D45b3
 !s100 22z:EQmZ0FXeW:YdGgLjo3
-R6
+R25
 31
-R7
+R26
 !i10b 1
-R8
-R15
-Z16 !s107 ../src/blink_tb.vhd|
+R27
+!s90 -reportprogress|300|-93|-work|work|../src/blink_tb.vhd|
+!s107 ../src/blink_tb.vhd|
 !i113 1
-R11
 R12
+R13
+R0
+F../src/blink_tb.vhd
+8../src/blink_tb.vhd
