@@ -1,6 +1,6 @@
 vlib work
-vcom -93 -work work ../../src/blink.vhd
-vcom -93 -work work ../src/blink_tb.vhd
-vsim -novopt blink_tb
+vcom -93 -work work ../../src/adderBehave.vhd
+vcom -93 -work work ../src/adderBehave_tb.vhd
+vsim -novopt adderBehave_tb
 do wave.do
 run 500 ns
