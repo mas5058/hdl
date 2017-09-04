@@ -5,7 +5,7 @@
 library ieee;
 use ieee.std_logic_1164.all;      
 
-entity adderBehave is 
+entity adderStruct is 
   port (
     a       : in std_logic;
     b       : in std_logic;
@@ -13,10 +13,72 @@ entity adderBehave is
     sum     : out std_logic;
     cout    : out std_logic
   );
-end adderBehave;
+end adderStruct;
 
-architecture arch of adderBehave is
+architecture arch of adderStruct is
+signal andABRez, andACinRez, andBCinRez,XorABRez :std_logic;
+component and2 is 
+  port (
+    a       : in std_logic;
+    b       : in std_logic;
+	z       : out std_logic
+  );
+end component;
+
+component xor2 is 
+  port (
+    a       : in std_logic;
+    b       : in std_logic;
+	z       : out std_logic
+  );
+end component;
+
+component or3 is 
+  port (
+    a       : in std_logic;
+    b       : in std_logic;
+    c       : in std_logic;
+	z       : out std_logic
+  );
+end component;
+
 begin 
-  sum  <= (a xor b) xor cin;
-  cout <= (a and b) or (b and cin) or (cin and a);
+  andAB:and2
+  port map(
+  a => a,
+  b => b,
+  z => andABRez
+  );
+  andACin:and2
+  port map(
+  a => a,
+  b => cin,
+  z => andACinRez
+  );
+  andBCin:and2
+  port map(
+  a => a,
+  b => b,
+  z => andBCinRez
+  );
+  orGate:or3
+  port map(
+  a => andABRez,
+  b => andBCinRez,
+  z => andACinRez,
+  z => cout
+  );
+  Xorgate1:xor2
+  port map(
+  a => a,
+  b => b,
+  z => XorABRez
+  );
+  Xorgate2:xor2
+  port map(
+  a => XorABRez,
+  b => cin,
+  z => sum
+  );
+  
 end arch; 
