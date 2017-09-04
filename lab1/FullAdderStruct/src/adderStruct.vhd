@@ -65,7 +65,7 @@ begin
   port map(
   a => andABRez,
   b => andBCinRez,
-  z => andACinRez,
+  c => andACinRez,
   z => cout
   );
   Xorgate1:xor2
