@@ -21,7 +21,7 @@ component and2 is
   port (
     a       : in std_logic;
     b       : in std_logic;
-	z       : out std_logic
+    z       : out std_logic
   );
 end component;
 
@@ -29,7 +29,7 @@ component xor2 is
   port (
     a       : in std_logic;
     b       : in std_logic;
-	z       : out std_logic
+    z       : out std_logic
   );
 end component;
 
@@ -38,7 +38,7 @@ component or3 is
     a       : in std_logic;
     b       : in std_logic;
     c       : in std_logic;
-	z       : out std_logic
+    z       : out std_logic
   );
 end component;
 
