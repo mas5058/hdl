@@ -64,7 +64,7 @@ R7
 !i10b 1
 Z16 !s108 1506616446.000000
 Z17 !s90 -reportprogress|300|-93|-work|work|../src/blink_tb.vhd|
-!s107 ../src/blink_tb.vhd|
+Z18 !s107 ../src/blink_tb.vhd|
 !i113 1
 R11
 R12
@@ -82,7 +82,87 @@ R7
 !i10b 1
 R16
 R17
-Z18 !s107 ../src/blink_tb.vhd|
+R18
+!i113 1
+R11
+R12
+Eseven_seg_tb
+Z19 w1506616553
+Z20 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+Z21 dS:/hdl/lab3/ssd/sim/script
+Z22 8../src/seven_seg_tb.vhd
+Z23 F../src/seven_seg_tb.vhd
+l0
+L9
+V=Fn8URJ<?]?=oFC]eNCod3
+!s100 <[]cRiH?Cjz[eK]hRnh^O3
+R6
+31
+Z24 !s110 1506618046
+!i10b 1
+Z25 !s108 1506618046.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
+!s107 ../src/seven_seg_tb.vhd|
+!i113 1
+R11
+R12
+Aarch
+R20
+R2
+R3
+DEx4 work 12 seven_seg_tb 0 22 =Fn8URJ<?]?=oFC]eNCod3
+l29
+L12
+VCHdVbL?A4MlX5^bNV483k2
+!s100 kT8cbTmhGc9=ELD:_f0L92
+R6
+31
+R24
+!i10b 1
+R25
+R26
+Z27 !s107 ../src/seven_seg_tb.vhd|
+!i113 1
+R11
+R12
+Essd
+Z28 w1506617996
+R2
+R3
+R21
+Z29 8../../src/ssd.vhd
+Z30 F../../src/ssd.vhd
+l0
+L8
+Vg2KoOD6;TzAi[9OcI_c=Z2
+!s100 zGP`hXd^OQK;<]TKT<:oD3
+R6
+31
+R24
+!i10b 1
+R25
+Z31 !s90 -reportprogress|300|-93|-work|work|../../src/ssd.vhd|
+Z32 !s107 ../../src/ssd.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 3 ssd 0 22 g2KoOD6;TzAi[9OcI_c=Z2
+l50
+L17
+VP:=E_B6DgkmE@ebUZiGoH0
+!s100 G?4WfP9lK_WU^iFE<mVk52
+R6
+31
+R24
+!i10b 1
+R25
+R31
+R32
 !i113 1
 R11
 R12

@@ -49,7 +49,6 @@ constant zero :
             std_logic_vector(6 downto 0):= "0001110";
     begin
 proc:process(clk, reset, bcd)
-begin
     if (reset = '1') then
         hex0 <= eight;
     elsif (rising_edge(clk)) then

@@ -1,27 +1,67 @@
 # do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 12:34:05 on Sep 28,2017
-# vcom -reportprogress 300 -93 -work work ../../src/blink.vhd 
+# Start time: 12:58:32 on Sep 28,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity blink
-# -- Compiling architecture beh of blink
-# End time: 12:34:06 on Sep 28,2017, Elapsed time: 0:00:01
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# ** Error: ../../src/ssd.vhd(52): Illegal concurrent statement.
+# ** Error: ../../src/ssd.vhd(55): Illegal concurrent statement.
+# ** Error: ../../src/ssd.vhd(74): near "process": (vcom-1576) expecting ';'.
+# End time: 12:58:32 on Sep 28,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+# Error in macro ./sim.do line 2
+# c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/ssd.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 13:00:31 on Sep 28,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# ** Error: ../../src/ssd.vhd(52): near "if": syntax error
+# End time: 13:00:31 on Sep 28,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+# Error in macro ./sim.do line 2
+# c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/ssd.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 13:00:46 on Sep 28,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 13:00:46 on Sep 28,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 12:34:06 on Sep 28,2017
-# vcom -reportprogress 300 -93 -work work ../src/blink_tb.vhd 
+# Start time: 13:00:46 on Sep 28,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity blink_tb
-# -- Compiling architecture arch of blink_tb
-# ** Warning: ../src/blink_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 12:34:06 on Sep 28,2017, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 13:00:46 on Sep 28,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vsim -novopt blink_tb 
-# Start time: 12:34:06 on Sep 28,2017
+# Start time: 13:00:46 on Sep 28,2017
 # //  ModelSim DE-64 10.6c Jul 26 2017
 # //
 # //  Copyright 1991-2017 Mentor Graphics Corporation
@@ -40,5 +80,11 @@
 # Loading ieee.std_logic_1164(body)
 # Loading work.blink_tb(arch)
 # Loading work.blink(beh)
-# End time: 12:34:28 on Sep 28,2017, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
+# ** Error: (vish-4014) No objects found matching '/seven_seg_tb/output'.
+# Executing ONERROR command at macro ./wave.do line 3
+# ** Error: (vish-4014) No objects found matching '/seven_seg_tb/clk'.
+# Executing ONERROR command at macro ./wave.do line 4
+# ** Error: (vish-4014) No objects found matching '/seven_seg_tb/reset'.
+# Executing ONERROR command at macro ./wave.do line 5
+# End time: 13:01:02 on Sep 28,2017, Elapsed time: 0:00:16
+# Errors: 9, Warnings: 0
