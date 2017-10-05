@@ -23,7 +23,7 @@ set_global_assignment -name VHDL_FILE ../../src/ssd.vhd
 
 
 # 3] set your pin constraints here
-set_location_assignment PIN_AB12 -to reset
+set_location_assignment PIN_AA14 -to reset
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AE26 -to sevenSeg[0]
 set_location_assignment PIN_AE27 -to sevenSeg[1]
