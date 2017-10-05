@@ -1,7 +1,7 @@
 |top
 clk => blink:uut.clk
 reset => blink:uut.reset
-output << blink:uut.output
+output <= blink:uut.output
 
 
 |top|blink:uut

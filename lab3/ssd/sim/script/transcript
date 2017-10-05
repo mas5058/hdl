@@ -364,3 +364,5 @@ do sim.do
 #    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
 # ** Note: ****************** sequential testbench stop ****************
 #    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+# End time: 12:28:40 on Oct 05,2017, Elapsed time: 0:49:52
+# Errors: 0, Warnings: 2

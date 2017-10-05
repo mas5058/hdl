@@ -1,5 +1,5 @@
 Analysis & Synthesis report for blink
-Thu Sep 28 12:27:15 2017
+Thu Oct 05 13:15:03 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: blink:uut
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +34,22 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 28 12:27:15 2017           ;
-; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
-; Revision Name                   ; blink                                           ;
-; Top-level Entity Name           ; top                                             ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 27                                              ;
-; Total pins                      ; 3                                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Thu Oct 05 13:15:03 2017               ;
+; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
+; Revision Name               ; blink                                           ;
+; Top-level Entity Name       ; top                                             ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -160,116 +148,11 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                           ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path    ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; ../../src/top.vhd                ; yes             ; User VHDL File  ; S:/hdl/lab3/blink/src/top.vhd   ;         ;
-; ../../src/blink.vhd              ; yes             ; User VHDL File  ; S:/hdl/lab3/blink/src/blink.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 19        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 33        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 5         ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 27        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 27        ;
-;                                             ;           ;
-; I/O pins                                    ; 3         ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 199       ;
-; Average fan-out                             ; 3.02      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |top                       ; 33 (0)              ; 27 (0)                    ; 0                 ; 0          ; 3    ; 0            ; |top                ; top         ; work         ;
-;    |blink:uut|             ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top|blink:uut      ; blink       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 27    ;
-; Number of registers using Synchronous Clear  ; 26    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: blink:uut ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; max_count      ; 50000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 27                          ;
-;     CLR               ; 1                           ;
-;     CLR SCLR          ; 26                          ;
-; arriav_lcell_comb     ; 33                          ;
-;     arith             ; 26                          ;
-;         1 data inputs ; 26                          ;
-;     normal            ; 7                           ;
-;         2 data inputs ; 1                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 5                           ;
-; boundary_port         ; 3                           ;
-;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 2.59                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -278,29 +161,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
-    Info: Processing started: Thu Sep 28 12:27:05 2017
+    Info: Processing started: Thu Oct 05 13:14:53 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off blink -c blink
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /hdl/lab3/blink/src/top.vhd
-    Info (12022): Found design unit 1: top-beh File: S:/hdl/lab3/blink/src/top.vhd Line: 16
-    Info (12023): Found entity 1: top File: S:/hdl/lab3/blink/src/top.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /hdl/lab3/blink/src/blink.vhd
-    Info (12022): Found design unit 1: blink-beh File: S:/hdl/lab3/blink/src/blink.vhd Line: 19
-    Info (12023): Found entity 1: blink File: S:/hdl/lab3/blink/src/blink.vhd Line: 8
-Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "blink" for hierarchy "blink:uut" File: S:/hdl/lab3/blink/src/top.vhd Line: 31
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 745 megabytes
-    Info: Processing ended: Thu Sep 28 12:27:15 2017
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+Warning (12019): Can't analyze file -- file ../../src/top.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file /hdl/lab3/ssd/src/blink.vhd
+    Info (12022): Found design unit 1: blink-beh File: S:/hdl/lab3/ssd/src/blink.vhd Line: 19
+    Info (12023): Found entity 1: blink File: S:/hdl/lab3/ssd/src/blink.vhd Line: 8
+Error (12007): Top-level design entity "top" is undefined
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
+    Error: Peak virtual memory: 732 megabytes
+    Error: Processing ended: Thu Oct 05 13:15:03 2017
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:20
 
 

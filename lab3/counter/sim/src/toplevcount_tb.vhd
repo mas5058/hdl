@@ -19,7 +19,7 @@ component toplevcount is
   );  
 end component; 
 
-signal sevenSeg         : std_logic_vector(6 downto 0) := others downto 0;
+signal sevenSeg         : std_logic_vector(6 downto 0);
 constant period     : time := 20ns;                                              
 signal clk          : std_logic := '0';
 signal reset        : std_logic := '1';
@@ -54,11 +54,11 @@ async_reset: process
     wait;
 end process; 
 
-uut: ssd 
+uut: toplevcount
   port map(        
     clk            => clk,
     reset          => reset,
     --bcd            => bcd,
-    hex0  => hex0
+    Sevenseg  => Sevenseg
   );
 end arch;

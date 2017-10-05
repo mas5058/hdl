@@ -48,11 +48,12 @@ component ssd is
   );
 end component;
 
+begin
 adder:generic_adder_beh
 	port map(
 		a=>sum_sig,
-		b=>"0001";
-		reset => reset,
+		b=>"0001",
+		cin => '0',
 		sum => sum_sig,
 		cout => open
 		);
@@ -71,3 +72,7 @@ uut:ssd
 	reset=>reset,
 	hex0=>sevenSeg
 	);
+
+
+end arch;
+
