@@ -12,7 +12,7 @@ end generic_adder_tb;
 
 architecture arch of generic_adder_tb is
 
-component generic_adder_beh is
+component generic_adder_arch is
   generic (
     bits    : integer := 4
   );
@@ -23,7 +23,7 @@ component generic_adder_beh is
     sum     : out std_logic_vector(bits-1 downto 0);
     cout    : out std_logic
   );
-end component generic_adder_beh;
+end component generic_adder_arch;
 
 constant NUM_BITS          : integer := 4;
 constant SEQUENTIAL_FLAG   : boolean := true;     -- false : concurrent stimuli, true: sequential stimuli
@@ -36,7 +36,7 @@ signal cin_guard           : std_logic_vector(NUM_BITS - 2 downto 0) := (others 
 
 begin
 
-uut: generic_adder_beh  
+uut: generic_adder_arch  
   generic map (
     bits => NUM_BITS
   )

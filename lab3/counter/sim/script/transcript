@@ -1,0 +1,323 @@
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:21:15 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:21:15 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:21:15 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:21:15 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -novopt seven_seg_tb 
+# Start time: 11:21:15 on Oct 05,2017
+# //  ModelSim DE-64 10.6c Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.ssd(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1350-11  ProcessID: 8876
+#           Attempting to use alternate WLF file "./wlft47i86q".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft47i86q
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:22:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:22:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:22:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/seven_seg_tb.vhd(64): Signal "hex0" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../src/seven_seg_tb.vhd(66): VHDL Compiler exiting
+# End time: 11:22:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# ** Error: c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+# Error in macro ./sim.do line 3
+# c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/seven_seg_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:25:38 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:25:38 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:25:38 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:25:38 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 11:25:39 on Oct 05,2017, Elapsed time: 0:04:24
+# Errors: 5, Warnings: 4
+# vsim -novopt seven_seg_tb 
+# Start time: 11:25:39 on Oct 05,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.ssd(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1350-11  ProcessID: 8876
+#           Attempting to use alternate WLF file "./wlft2ah8m2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2ah8m2
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+add wave -position end sim:/seven_seg_tb/uut/*
+add wave -position end sim:/seven_seg_tb/uut/*
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:28:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:28:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:28:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:28:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 11:28:34 on Oct 05,2017, Elapsed time: 0:02:55
+# Errors: 0, Warnings: 3
+# vsim -novopt seven_seg_tb 
+# Start time: 11:28:34 on Oct 05,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.ssd(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1350-11  ProcessID: 8876
+#           Attempting to use alternate WLF file "./wlftdjcnwj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdjcnwj
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+add wave -position end sim:/seven_seg_tb/uut/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf S:/hdl/lab3/ssd/sim/script/wave.do
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:29:18 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:29:18 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:29:18 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:29:18 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 11:29:19 on Oct 05,2017, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 3
+# vsim -novopt seven_seg_tb 
+# Start time: 11:29:19 on Oct 05,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.ssd(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1350-11  ProcessID: 8876
+#           Attempting to use alternate WLF file "./wlftc45h03".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc45h03
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:30:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:30:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:30:33 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: ../src/seven_seg_tb.vhd(64): Signal "hex0" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../src/seven_seg_tb.vhd(66): VHDL Compiler exiting
+# End time: 11:30:33 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# ** Error: c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+# Error in macro ./sim.do line 3
+# c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/seven_seg_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:31:12 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:31:12 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:31:12 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error (suppressible): ../src/seven_seg_tb.vhd(64): (vcom-1272) Length of formal "hex0" is 7; length of actual is 4.
+# ** Error: ../src/seven_seg_tb.vhd(66): VHDL Compiler exiting
+# End time: 11:31:13 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 1
+# ** Error: c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+# Error in macro ./sim.do line 3
+# c:/Software/Modelsim/10.6c/win64pe/vcom failed.
+#     while executing
+# "vcom -93 -work work ../src/seven_seg_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:31:28 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ssd
+# -- Compiling architecture beh of ssd
+# End time: 11:31:28 on Oct 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 11:31:28 on Oct 05,2017
+# vcom -reportprogress 300 -93 -work work ../src/seven_seg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity seven_seg_tb
+# -- Compiling architecture arch of seven_seg_tb
+# ** Warning: ../src/seven_seg_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:31:29 on Oct 05,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# End time: 11:31:29 on Oct 05,2017, Elapsed time: 0:02:10
+# Errors: 9, Warnings: 5
+# vsim -novopt seven_seg_tb 
+# Start time: 11:31:29 on Oct 05,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_tb(arch)
+# Loading work.ssd(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1350-11  ProcessID: 8876
+#           Attempting to use alternate WLF file "./wlftbs71ch".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbs71ch
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /seven_seg_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 480 ns  Iteration: 0  Instance: /seven_seg_tb

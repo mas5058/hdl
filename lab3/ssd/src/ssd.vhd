@@ -1,7 +1,4 @@
--------------------------------------------------------------------------------
--- Dr. Kaputa
--- blink ssd
--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -10,7 +7,7 @@ entity ssd is
     bcd             : in  std_logic_vector(3 downto 0); 
     clk             : in  std_logic; 
     reset           : in  std_logic;
-    hex0          : out std_logic_vector(6 downto 0)
+    hex0            : out std_logic_vector(6 downto 0)
   );
 end ssd;
 
@@ -51,7 +48,7 @@ constant zero :
 proc:process(clk, reset, bcd)
 begin
     if (reset = '1') then
-        hex0 <= eight;
+        hex0 <= zero;
     elsif (rising_edge(clk)) then
         case(bcd(3 downto 0)) is
             when "0000" => hex0 <= zero;
