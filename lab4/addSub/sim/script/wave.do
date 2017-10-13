@@ -1,33 +1,27 @@
 onerror {resume}
-radix define States {
-    "7'b1000000" "0" -color "red",
-    "7'b1111001" "1" -color "red",
-    "7'b0100100" "2" -color "red",
-    "7'b0110000" "3" -color "red",
-    "7'b0011001" "4" -color "red",
-    "7'b0010010" "5" -color "red",
-    "7'b0000010" "6" -color "red",
-    "7'b1111000" "7" -color "red",
-    "7'b0000000" "8" -color "red",
-    "7'b0011000" "9" -color "red",
-    -default default
-}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /seven_seg_tb/hex0
-add wave -noupdate /seven_seg_tb/clk
-add wave -noupdate /seven_seg_tb/reset
-add wave -noupdate /seven_seg_tb/bcd
-add wave -noupdate /seven_seg_tb/uut/bcd
-add wave -noupdate /seven_seg_tb/uut/clk
-add wave -noupdate /seven_seg_tb/uut/reset
-add wave -noupdate /seven_seg_tb/uut/hex0
+add wave -noupdate /top_tb/uut/a
+add wave -noupdate /top_tb/uut/b
+add wave -noupdate /top_tb/uut/add
+add wave -noupdate /top_tb/uut/sub
+add wave -noupdate /top_tb/uut/clk
+add wave -noupdate /top_tb/uut/reset
+add wave -noupdate /top_tb/uut/hex0
+add wave -noupdate /top_tb/uut/hex1
+add wave -noupdate /top_tb/uut/hex2
+add wave -noupdate /top_tb/uut/asig
+add wave -noupdate /top_tb/uut/bsig
+add wave -noupdate /top_tb/uut/rezsig
+add wave -noupdate /top_tb/uut/opersig
+add wave -noupdate /top_tb/uut/subsig
+add wave -noupdate /top_tb/uut/addsig
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {50 ns} 0}
-quietly wave cursor active 1
-configure wave -namecolwidth 177
-configure wave -valuecolwidth 40
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
+configure wave -namecolwidth 150
+configure wave -valuecolwidth 100
 configure wave -justifyvalue left
-configure wave -signalnamewidth 1
+configure wave -signalnamewidth 0
 configure wave -snapdistance 10
 configure wave -datasetprefix 0
 configure wave -rowmargin 4
@@ -38,4 +32,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {401 ns} {506 ns}
+WaveRestoreZoom {0 ps} {1 ns}

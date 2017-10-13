@@ -62,11 +62,11 @@ end component;
     if (reset = '1') then
         asig <= (others => '0');
         bsig <= (others => '0');
-    elsif(rising_edge(clk)) then
+    elsif(rising_edge(clk)) then{
         asig <= '0' & a;
         bsig <= '0' & b;
         --wait for 10 ns;
-    
+    }
     --report
     --wait;
     end if;

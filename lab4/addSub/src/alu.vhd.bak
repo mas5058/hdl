@@ -28,5 +28,6 @@ process(a,b,oper, signeda, signedb)
         when "01" => rez <= a - b;
         when others => rez <= "00000000";
     end case;
+    end case;
   end process;
 end arch;
