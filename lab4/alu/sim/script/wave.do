@@ -1,8 +1,9 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /blink_tb/output
-add wave -noupdate /blink_tb/clk
-add wave -noupdate /blink_tb/reset
+add wave -noupdate /alu_tb/output
+add wave -noupdate /alu_tb/a
+add wave -noupdate /alu_tb/b
+add wave -noupdate /alu_tb/oper
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {50 ns} 0}
 quietly wave cursor active 1
