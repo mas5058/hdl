@@ -22,9 +22,10 @@ begin
 process(a,b,oper, signeda, signedb)
   begin
     case oper is
-		when "10" => rez <= a + b;
-		when "01" => rez <= a - b
-		when others => rez <= "00000000"
+        when "10" => rez <= a + b;
+        when "01" => rez <= a - b
+        when others => rez <= "00000000"
+    end case;
     end case;
   end process;
 end arch;
