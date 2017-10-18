@@ -1,5 +1,8 @@
 
 library ieee;
+use ieee.std_logic_1164.all;      
+use ieee.std_logic_signed.all;  
+use ieee.numeric_std.all;  
 use ieee.std_logic_1164.all;
 
 entity top_tb is
@@ -32,6 +35,19 @@ clock: process
 end process; 
  
 -- reset process
+sequential_tb : process 
+    begin
+      report "****************** sequential testbench start ****************";
+      wait for 40 ns;   -- let all the initial conditions trickle through
+      for i in 0 to 9 loop
+        a <= a + '1';
+        wait for 40 ns;
+       b <= b + '1';
+      end loop;
+      report "****************** sequential testbench stop ****************";
+      wait;
+  end process; 
+  
 async_reset: process
   begin
     wait for 2 * period;

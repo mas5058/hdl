@@ -55,7 +55,7 @@ end component;
          
     begin 
     opersig <= addsig & subsig;
-    syncproc: process
+    syncproc: process(clk, reset)
     begin
     --report
     --wait for 20 ns;
