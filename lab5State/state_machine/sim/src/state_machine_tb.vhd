@@ -10,32 +10,34 @@ end state_machine_tb;
 
 architecture beh of state_machine_tb is
 
-component state_machine
+entity top is
   port (
-    clk               : in std_logic;
-    reset             : in std_logic;
-    
-    fighting          : out std_logic
+    clk             : in  std_logic; 
+    reset           : in  std_logic;
+    stateChange     : in  std_logic;
+    input           : in  std_logic_vector(3 downto 0);
+    hex0            : out std_logic_vector(6 downto 0);
+    hex1            : out std_logic_vector(6 downto 0);
   );
-  end component;
+end top;
   
 constant period         : time := 20ns;                                              
 signal clk              : std_logic := '0';
 signal reset            : std_logic := '1';
-signal nearby_opponent  : std_logic := '0';
-signal friend_wounded   : std_logic := '0';
-signal me_wounded       : std_logic := '0';
-signal fighting         : std_logic;
+signal stateChange      : std_logic := '0';
+signal input            : std_logic_vector := (others => '0');
+signal hex0             : std_logic_vector := (others => '0');
+signal hex1             : std_logic_vector := (others => '0');;
 
 begin 
-uut: state_machine 
+uut: top 
   port map(
     clk               => clk,
     reset             => reset,
-    nearby_opponent   => nearby_opponent,
-    friend_wounded    => friend_wounded,
-    me_wounded        => me_wounded,
-    fighting          => fighting
+    stateChange       => stateChange,
+    input             => input,
+    hex0              => hex0,
+    hex1              => hex1
   );
  
 -- clock process
@@ -55,19 +57,18 @@ end process;
     
 main: process 
   begin
-    assert false report "****************** TB Start ****************" severity note;
-    wait for 65 ns;     
-    assert(fighting = '0') report "should be waiting";
-    nearby_opponent <= '1';
-    wait for 20 ns;          
-    assert(fighting = '1') report "should be fighting";
-    friend_wounded  <= '1';
-    wait for 20 ns;
-    assert(fighting = '0') report "should be healing";
-    me_wounded      <= '1';
-    wait for 20 ns;
-    assert(fighting = '0') report "should be fleaing";
-    assert false report "****************** TB Finish ****************" severity note;
+    wait for 40 ns;
+    input <= "0001";
+    stateChange <= '1';
+    stateChange <= '0';
+    wait for 40 ns;
+    input <= "0011";
+    stateChange <= '1';
+    stateChange <= '0';
+    wait for 40 ns;
+    stateChange <= '1';
+    stateChange <= '0';
+    wait for 40 ns;
     wait;
   end process;  
 end beh;
