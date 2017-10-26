@@ -19,7 +19,7 @@ architecture beh of state_machine is
 -- signal declarations
 constant input_a        : std_logic_vector(3 downto 0) := "0001";
 constant input_b        : std_logic_vector(3 downto 0) := "0010";
-constant disp_sum      : std_logic_vector(3 downto 0) := "00100";
+constant disp_sum      : std_logic_vector(3 downto 0) := "0110";
 constant disp_diff        : std_logic_vector(3 downto 0) := "0101";
 
 

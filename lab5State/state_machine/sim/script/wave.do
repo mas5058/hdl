@@ -1,11 +1,16 @@
 onerror {resume}
 radix define States {
-    "11'b0001" "WAIT" -color "orange",
-    "11'b0010" "ATTACK" -color "red",
-    "11'b0100" "HEAL" -color "blue",
-    "11'b1000" "FLEA" -color "yellow",
-    -default hexadecimal
-    -defaultcolor white
+    "7'b1000000" "0" -color "red",
+    "7'b1111001" "1" -color "red",
+    "7'b0100100" "2" -color "red",
+    "7'b0110000" "3" -color "red",
+    "7'b0011001" "4" -color "red",
+    "7'b0010010" "5" -color "red",
+    "7'b0000010" "6" -color "red",
+    "7'b1111000" "7" -color "red",
+    "7'b0000000" "8" -color "red",
+    "7'b0011000" "9" -color "red",
+    -default default
 }
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /state_machine_tb/uut/clk

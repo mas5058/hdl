@@ -14,9 +14,7 @@ component state_machine
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    nearby_opponent   : in std_logic;
-    friend_wounded    : in std_logic;
-    me_wounded        : in std_logic;
+    
     fighting          : out std_logic
   );
   end component;
