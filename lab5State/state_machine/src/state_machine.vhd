@@ -38,10 +38,9 @@ begin
 end process;
 
 -- next state logic
-process(state_reg,nearby_opponent,friend_wounded,me_wounded)
+process(state_reg)
 begin
   -- default values
-  fighting    <= '0';
   state_next <= state_reg;    -- prevents a latch
   case state_reg is  
     when input_a =>
@@ -65,7 +64,7 @@ begin
       else
         state_next <= disp_sum;
       end if;
-    when disp_sum =>
+    when disp_diff =>
       if (stateChange = '1') then  
         state_next <= input_a;
         en <= "1000";

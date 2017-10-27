@@ -7,7 +7,7 @@ entity ssd is
     input             : in  std_logic_vector(3 downto 0); 
     clk             : in  std_logic; 
     reset           : in  std_logic;
-    hex0, hex1            : out std_logic_vector(6 downto 0)
+    hex            : out std_logic_vector(6 downto 0)
   );
 end ssd;
 
@@ -45,47 +45,47 @@ constant zero :
     constant f : 
             std_logic_vector(6 downto 0):= "0001110";
     begin
-proc:process(clk, reset, bcd)
+proc:process(clk, reset, input)
 begin
     if (reset = '1') then
-        hex0 <= zero;
+        hex <= zero;
     elsif (rising_edge(clk)) then
         case(input(3 downto 0)) is
-            when "0000" => hex0 <= zero;
-            when "0001" => hex0 <= one;
-            when "0010" => hex0 <= two;
-            when "0011" => hex0 <= three;
-            when "0100" => hex0 <= four;
-            when "0101" => hex0 <= five;
-            when "0110" => hex0 <= six;
-            when "0111" => hex0 <= seven;
-            when "1000" => hex0 <= eight;
-            when "1001" => hex0 <= nine;
-            when "1010" => hex0 <= a;
-            when "1011" => hex0 <= b;
-            when "1100" => hex0 <= c;
-            when "1101" => hex0 <= d;
-            when "1110" => hex0 <= e;
-            when others => hex0 <= f;
+            when "0000" => hex <= zero;
+            when "0001" => hex <= one;
+            when "0010" => hex <= two;
+            when "0011" => hex <= three;
+            when "0100" => hex <= four;
+            when "0101" => hex <= five;
+            when "0110" => hex <= six;
+            when "0111" => hex <= seven;
+            when "1000" => hex <= eight;
+            when "1001" => hex <= nine;
+            when "1010" => hex <= a;
+            when "1011" => hex <= b;
+            when "1100" => hex <= c;
+            when "1101" => hex <= d;
+            when "1110" => hex <= e;
+            when others => hex <= f;
         end case;
-        case(input(7 downto 4)) is
-            when "0000" => hex1 <= zero;
-            when "0001" => hex1 <= one;
-            when "0010" => hex1 <= two;
-            when "0011" => hex1 <= three;
-            when "0100" => hex1 <= four;
-            when "0101" => hex1 <= five;
-            when "0110" => hex1 <= six;
-            when "0111" => hex1 <= seven;
-            when "1000" => hex1 <= eight;
-            when "1001" => hex1 <= nine;
-            when "1010" => hex1 <= a;
-            when "1011" => hex1 <= b;
-            when "1100" => hex1 <= c;
-            when "1101" => hex1 <= d;
-            when "1110" => hex1 <= e;
-            when others => hex1 <= f;
-        end case;
+        -- case(input(7 downto 4)) is
+            -- when "0000" => hex1 <= zero;
+            -- when "0001" => hex1 <= one;
+            -- when "0010" => hex1 <= two;
+            -- when "0011" => hex1 <= three;
+            -- when "0100" => hex1 <= four;
+            -- when "0101" => hex1 <= five;
+            -- when "0110" => hex1 <= six;
+            -- when "0111" => hex1 <= seven;
+            -- when "1000" => hex1 <= eight;
+            -- when "1001" => hex1 <= nine;
+            -- when "1010" => hex1 <= a;
+            -- when "1011" => hex1 <= b;
+            -- when "1100" => hex1 <= c;
+            -- when "1101" => hex1 <= d;
+            -- when "1110" => hex1 <= e;
+            -- when others => hex1 <= f;
+        -- end case;
       end if;
       end process;
 end beh;

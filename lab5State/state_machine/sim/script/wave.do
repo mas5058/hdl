@@ -15,10 +15,11 @@ radix define States {
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /state_machine_tb/uut/clk
 add wave -noupdate /state_machine_tb/uut/reset
-add wave -noupdate /state_machine_tb/uut/nearby_opponent
-add wave -noupdate /state_machine_tb/uut/friend_wounded
-add wave -noupdate /state_machine_tb/uut/me_wounded
-add wave -noupdate /state_machine_tb/uut/fighting
+add wave -noupdate /state_machine_tb/uut/stateChange
+add wave -noupdate /state_machine_tb/uut/input
+add wave -noupdate /state_machine_tb/uut/hex0
+add wave -noupdate /state_machine_tb/uut/hex1
+add wave -noupdate /state_machine_tb/uut/hex2
 add wave -noupdate -radix States -expand /state_machine_tb/uut/state_reg
 add wave -noupdate -radix States -expand /state_machine_tb/uut/state_next
 TreeUpdate [SetDefaultTree]

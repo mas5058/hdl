@@ -2,7 +2,8 @@
 -- doubledabble taken from Wikipedia
 -------------------------------------------------------------------------------
 library ieee;
-use ieee.std_logic_1164.all;      
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;      
 
 entity doubledabble is
   port (
@@ -17,7 +18,7 @@ end doubledabble;
 architecture arch of doubledabble  is
 
 begin
-process(clk,reset)
+process(binIN)
   -- temporary variable
   variable temp : STD_LOGIC_VECTOR (11 downto 0);
   
@@ -27,7 +28,7 @@ process(clk,reset)
   -- hundreds = bcd(11 downto 8)
   -- tens = bcd(7 downto 4)
   -- units = bcd(3 downto 0)
-  variable bcd : UNSIGNED (15 downto 0) := (others => '0');
+  variable bcd :UNSIGNED(15 downto 0) := (others => '0');
 
   -- by
   -- https://en.wikipedia.org/wiki/Double_dabble
@@ -73,5 +74,5 @@ process(clk,reset)
     hundreds <= STD_LOGIC_VECTOR(bcd(11 downto 8));
     thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
   
-  end process bcd1;      
+  end process;      
 end arch;

@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 -- Dr. Kaputa
--- blink top
+-- top
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -13,17 +13,28 @@ entity top is
     input           : in  std_logic_vector(3 downto 0);
     hex0            : out std_logic_vector(6 downto 0);
     hex1            : out std_logic_vector(6 downto 0);
+    hex2            : out std_logic_vector(6 downto 0);
   );
 end top;
 
 architecture beh of top is
+
+component doubledabble is
+  port (
+    binIn             : in  std_logic_vector(11 downto 0); 
+    ones              : out std_logic_vector (3 downto 0);
+    tens              : out std_logic_vector (3 downto 0);
+    hundreds          : out std_logic_vector (3 downto 0);
+    thousands         : out std_logic_vector (3 downto 0)
+  );  
+end component; 
 
 component ssd is
   port (
     input                 : in  std_logic_vector(3 downto 0); 
     clk                   : in  std_logic; 
     reset                 : in  std_logic;
-    hex0, hex1            : out std_logic_vector(6 downto 0)
+    hex                   : out std_logic_vector(6 downto 0)
   );  
 end component;  
 
@@ -37,17 +48,29 @@ component state_machine is
   );
 end component;
 
-component alu is
+entity alu is
   port (
-    a               : in std_logic_vector(7 downto 0); 
-    b               : in std_logic_vector(7 downto 0);
-    oper            : in  std_logic_vector(1 downto 0);
-    output          : out std_logic
+    a              : in std_logic_vector(7 downto 0); 
+    b              : in std_logic_vector(7 downto 0);
+    oper           : in  std_logic_vector(1 downto 0);
+    clk            : in std_logic;
+    reset          : in std_logic;
+    output         : out std_logic_vector(7 downto 0);
   );  
-end component;
-signal en                 : std_logic_vector(3 downto 0);
-signal rez,asig,bsig     : std_logic_vector(7 downto 0):= (others => '0');
+end alu;
+
+signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0);
+signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
 begin
+dd: doubledabble
+    generic map(
+    port map(
+    binIn => rez,
+    ones => oneSig,
+    tens => tenSig
+    hundreds => Hundsig,
+    thousands => null
+    );
 sta: state_machine
   generic map (
   port map(
@@ -56,14 +79,29 @@ sta: state_machine
     reset           => reset,
     en              => en
   );
-  uut: ssd  
+  hex0: ssd  
   generic map (
   port map(
     input     => rez,
     clk       => clk,
     reset     => reset,
-    hex0      => hex0,
-    hex1      => hex1
+    hex      => hex0,
+  );
+  hex1: ssd  
+  generic map (
+  port map(
+    input     => rez,
+    clk       => clk,
+    reset     => reset,
+    hex      => hex1,
+  );
+  hex2: ssd  
+  generic map (
+  port map(
+    input     => rez,
+    clk       => clk,
+    reset     => reset,
+    hex      => hex2,
   );
 addersub: alu
   generic map (
