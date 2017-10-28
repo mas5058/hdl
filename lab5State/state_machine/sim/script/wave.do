@@ -1,29 +1,21 @@
 onerror {resume}
 radix define States {
-    "7'b1000000" "0" -color "red",
-    "7'b1111001" "1" -color "red",
-    "7'b0100100" "2" -color "red",
-    "7'b0110000" "3" -color "red",
-    "7'b0011001" "4" -color "red",
-    "7'b0010010" "5" -color "red",
-    "7'b0000010" "6" -color "red",
-    "7'b1111000" "7" -color "red",
-    "7'b0000000" "8" -color "red",
-    "7'b0011000" "9" -color "red",
-    -default default
+    "11'b0001" "input_a" -color "orange",
+    "11'b0010" "input_b" -color "red",
+    "11'b0110" "disp_sum" -color "blue",
+    "11'b0101" "disp_dif" -color "yellow",
+    -default hexadecimal
+    -defaultcolor white
 }
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /state_machine_tb/uut/clk
-add wave -noupdate /state_machine_tb/uut/reset
-add wave -noupdate /state_machine_tb/uut/stateChange
-add wave -noupdate /state_machine_tb/uut/input
-add wave -noupdate /state_machine_tb/uut/hex0
-add wave -noupdate /state_machine_tb/uut/hex1
-add wave -noupdate /state_machine_tb/uut/hex2
-add wave -noupdate -radix States -expand /state_machine_tb/uut/state_reg
-add wave -noupdate -radix States -expand /state_machine_tb/uut/state_next
+add wave -noupdate /state_machine_tb/clk
+add wave -noupdate /state_machine_tb/reset
+add wave -noupdate -radix binary /state_machine_tb/stateChange
+add wave -noupdate -radix binary /state_machine_tb/en
+add wave -noupdate -radix States /state_machine_tb/uut/state_reg
+add wave -noupdate -radix States /state_machine_tb/uut/state_next
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {357 ns} 0}
+WaveRestoreCursors {{Cursor 1} {0 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 307
 configure wave -valuecolwidth 100
@@ -39,4 +31,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {150 ns} {1975 ns}
+WaveRestoreZoom {0 ns} {1825 ns}

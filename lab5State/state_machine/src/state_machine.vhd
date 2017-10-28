@@ -38,7 +38,7 @@ begin
 end process;
 
 -- next state logic
-process(state_reg)
+process(state_reg,stateChange)
 begin
   -- default values
   state_next <= state_reg;    -- prevents a latch

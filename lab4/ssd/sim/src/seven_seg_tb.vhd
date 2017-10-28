@@ -13,7 +13,7 @@ architecture arch of seven_seg_tb is
 
 component ssd is
   port (
-	bcd             : in std_logic_vector(3 downto 0);
+    bcd             : in std_logic_vector(3 downto 0);
     clk             : in std_logic; 
     reset           : in std_logic;
     hex0               : out std_logic_vector(6 downto 0)
