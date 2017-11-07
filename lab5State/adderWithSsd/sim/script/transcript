@@ -1,27 +1,26 @@
 # do sim.do
-# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity state_machine
 # -- Compiling architecture beh of state_machine
-# End time: 19:51:17 on Oct 27,2017, Elapsed time: 0:00:00
+# End time: 16:14:14 on Nov 07,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ssd
 # -- Compiling architecture beh of ssd
-# End time: 19:51:17 on Oct 27,2017, Elapsed time: 0:00:00
+# End time: 16:14:14 on Nov 07,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,10 +30,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture arch of alu
-# End time: 19:51:17 on Oct 27,2017, Elapsed time: 0:00:00
+# End time: 16:14:14 on Nov 07,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -42,20 +41,20 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity doubledabble
 # -- Compiling architecture arch of doubledabble
-# End time: 19:51:17 on Oct 27,2017, Elapsed time: 0:00:00
+# End time: 16:14:14 on Nov 07,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture beh of top
-# End time: 19:51:17 on Oct 27,2017, Elapsed time: 0:00:00
+# End time: 16:14:14 on Nov 07,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 19:51:17 on Oct 27,2017
+# Start time: 16:14:14 on Nov 07,2017
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -63,10 +62,11 @@
 # -- Compiling entity top_tb
 # -- Compiling architecture beh of top_tb
 # ** Warning: ../src/top_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 19:51:18 on Oct 27,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
+# ** Warning: ../src/top_tb.vhd(64): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# End time: 16:14:15 on Nov 07,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
 # vsim -novopt top_tb 
-# Start time: 19:51:18 on Oct 27,2017
+# Start time: 16:14:15 on Nov 07,2017
 # //  ModelSim DE-64 10.6c Jul 26 2017
 # //
 # //  Copyright 1991-2017 Mentor Graphics Corporation
@@ -92,3 +92,8 @@
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_signed(body)
 # Loading work.alu(arch)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1360-12  ProcessID: 6484
+#           Attempting to use alternate WLF file "./wlftkrcxx0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkrcxx0

@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/dkaputa/Dropbox/RIT/courses/341 - hardwareDescriptionLanguages_2016/lectures/week7/state_machine/sim/script
+Estate_machine
+Z1 w1466474172
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8../../src/state_machine.vhd
+Z5 F../../src/state_machine.vhd
+l0
+L8
+VF^gEkA@1l9B<h=E0?jN@^0
+!s100 V>>C39dVmX^:YbXWC]2Jo2
+Z6 OL;C;10.3c;59
+31
+Z7 !s110 1475505206
+!i10b 1
+Z8 !s108 1475505206.157000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../src/state_machine.vhd|
+Z10 !s107 ../../src/state_machine.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abeh
+R2
+R3
+DEx4 work 13 state_machine 0 22 F^gEkA@1l9B<h=E0?jN@^0
+31
+R7
+l29
+L19
+VaToH84VNaU>R]=^^Q1Ykg3
+!s100 eVl0@DMGBie3j`m;lKTBF2
+R6
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Estate_machine_tb
+R1
+R2
+R3
+R0
+Z13 8../src/state_machine_tb.vhd
+Z14 F../src/state_machine_tb.vhd
+l0
+L8
+V`H_3nn0T@o915Y3_j;_iG0
+!s100 `bed2_CPgDLf;75_Rj1bN0
+R6
+31
+R7
+!i10b 1
+Z15 !s108 1475505206.246000
+Z16 !s90 -reportprogress|300|-93|-work|work|../src/state_machine_tb.vhd|
+Z17 !s107 ../src/state_machine_tb.vhd|
+!i113 0
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 16 state_machine_tb 0 22 `H_3nn0T@o915Y3_j;_iG0
+31
+R7
+l32
+L11
+VEGEBTXAVnP=lRMWaFkzLE3
+!s100 cDU[eQBo]=cTCaLF@c?Wl1
+R6
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R11
+R12

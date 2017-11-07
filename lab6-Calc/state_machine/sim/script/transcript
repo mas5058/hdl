@@ -1,0 +1,48 @@
+# //  ModelSim SE-64 10.3c Jul 19 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do sim.do
+# Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+# Start time: 10:33:26 on Oct 03,2016
+# vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity state_machine
+# -- Compiling architecture beh of state_machine
+# End time: 10:33:26 on Oct 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+# Start time: 10:33:26 on Oct 03,2016
+# vcom -reportprogress 300 -93 -work work ../src/state_machine_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity state_machine_tb
+# -- Compiling architecture beh of state_machine_tb
+# ** Warning: [4] ../src/state_machine_tb.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:33:26 on Oct 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -do "sim.do" 
+# Start time: 10:33:26 on Oct 03,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# Loading std.standard
+# Refreshing C:/dkaputa/Dropbox/RIT/courses/341 - hardwareDescriptionLanguages_2016/lectures/week7/state_machine/sim/script/work.state_machine_tb(beh)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.state_machine_tb(beh)
+# Refreshing C:/dkaputa/Dropbox/RIT/courses/341 - hardwareDescriptionLanguages_2016/lectures/week7/state_machine/sim/script/work.state_machine(beh)
+# Loading work.state_machine(beh)
+# ** Note: ****************** TB Start ****************
+#    Time: 0 ns  Iteration: 0  Instance: /state_machine_tb
+# ** Note: ****************** TB Finish ****************
+#    Time: 125 ns  Iteration: 0  Instance: /state_machine_tb
+# End time: 20:36:23 on Oct 03,2016, Elapsed time: 10:02:57
+# Errors: 0, Warnings: 1
