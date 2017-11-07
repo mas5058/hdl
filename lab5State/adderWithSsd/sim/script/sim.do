@@ -7,4 +7,4 @@ vcom -93 -work work ../../src/top.vhd
 vcom -93 -work work ../src/top_tb.vhd
 vsim -novopt top_tb
 do wave.do
-run 1 us
+run 10000 us
