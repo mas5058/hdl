@@ -59,6 +59,15 @@ component alu is
   );  
 end component;
 
+component risingEdgeSynch is
+  port (
+    clk             : in  std_logic; 
+	reset           : in std_logic;
+    input           : in  std_logic;
+    output          : out std_logic
+  );  
+end component;
+
 signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) := (others => '0');
 signal opersig                                  : std_logic_vector(1 downto 0) := (others => '0');
 signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
