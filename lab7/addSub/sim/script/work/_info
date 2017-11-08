@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dS:/hdl/lab3/blink/sim/script
+Eblink
+Z1 w1473882264
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8../../src/blink.vhd
+Z5 F../../src/blink.vhd
+l0
+L8
+VgSbeDC?JAd;]:HFX73TlZ1
+!s100 Q@N>i]_LJ6WJS3Gg1AeaQ1
+Z6 OP;C;10.6c;65
+31
+Z7 !s110 1506616446
+!i10b 1
+Z8 !s108 1506616445.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../src/blink.vhd|
+Z10 !s107 ../../src/blink.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+DEx4 work 5 blink 0 22 gSbeDC?JAd;]:HFX73TlZ1
+Z13 OL;C;10.5b;63
+31
+R7
+l24
+L19
+VP23a4Dd3i:B_KMcmjUBQW2
+!s100 XaK8X88lIl<AKz91bLI_I0
+R6
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eblink_tb
+Z14 w1473882306
+R2
+R3
+R0
+Z15 8../src/blink_tb.vhd
+Z16 F../src/blink_tb.vhd
+l0
+L8
+VaHa@?Cg=6RA0<[l9m10=d3
+!s100 4fz^0J8zCXK72OnVz_Qoz0
+R6
+31
+R7
+!i10b 1
+Z17 !s108 1506616446.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|../src/blink_tb.vhd|
+Z19 !s107 ../src/blink_tb.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 8 blink_tb 0 22 aHa@?Cg=6RA0<[l9m10=d3
+R13
+31
+R7
+l29
+L11
+VL;KInh4cKG[4HBA34D45b3
+!s100 22z:EQmZ0FXeW:YdGgLjo3
+R6
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Eseven_seg_tb
+Z20 w1507217437
+Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+Z22 dS:/hdl/lab3/ssd/sim/script
+Z23 8../src/seven_seg_tb.vhd
+Z24 F../src/seven_seg_tb.vhd
+l0
+L9
+V=Fn8URJ<?]?=oFC]eNCod3
+!s100 <[]cRiH?Cjz[eK]hRnh^O3
+R6
+31
+Z25 !s110 1507217927
+!i10b 1
+Z26 !s108 1507217927.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
+Z28 !s107 ../src/seven_seg_tb.vhd|
+!i113 1
+R11
+R12
+Aarch
+R21
+R2
+R3
+Z29 DEx4 work 12 seven_seg_tb 0 22 =Fn8URJ<?]?=oFC]eNCod3
+l29
+L12
+Z30 V:ihmMG=zoG>hCe_TYPU253
+Z31 !s100 :?I1SOLF3`AOEP:?ZX<Nb0
+R6
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Essd
+Z32 w1507217874
+R2
+R3
+R22
+Z33 8../../src/ssd.vhd
+Z34 F../../src/ssd.vhd
+l0
+L5
+VaDXC0kHG;FiKb0BWjKV2V2
+!s100 dTC92D<1e8RFX^Jj]D87m2
+R6
+31
+R25
+!i10b 1
+R26
+Z35 !s90 -reportprogress|300|-93|-work|work|../../src/ssd.vhd|
+Z36 !s107 ../../src/ssd.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 3 ssd 0 22 aDXC0kHG;FiKb0BWjKV2V2
+l47
+L14
+V575B;3kK6]?>Z?L4dSZki2
+!s100 Rnj32YZ=M<^8jJ=K:M_WK0
+R6
+31
+R25
+!i10b 1
+R26
+R35
+R36
+!i113 1
+R11
+R12
