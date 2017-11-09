@@ -1,43 +1,43 @@
 -------------------------------------------------------------------------------
 -- Dr. Kaputa
--- blink led demo
+-- arithmatic logic unit
 -------------------------------------------------------------------------------
 library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_signed.all;   
-use ieee.numeric_std.all;      
+use ieee.std_logic_1164.all; 
+use ieee.numeric_std.all;     
 
 entity alu is
   port (
-    a              : in std_logic_vector(7 downto 0); 
-    b              : in std_logic_vector(7 downto 0);
-    oper           : in  std_logic_vector(1 downto 0);
-    clk            : in std_logic;
-    reset          : in std_logic;
-    output         : out std_logic_vector(7 downto 0)
+    clk           : in  std_logic;
+    reset         : in  std_logic;
+    a             : in  std_logic_vector(7 downto 0); 
+    b             : in  std_logic_vector(7 downto 0);
+    op            : in  std_logic_vector(1 downto 0); -- 00: add, 01: sub, 10: mult, 11: div
+    result        : out std_logic_vector(7 downto 0)
   );  
 end alu;  
 
-architecture arch of alu  is
+architecture beh of alu  is
 
-signal rez :std_logic_vector(7 downto 0);
+signal result_temp : std_logic_vector(15 downto 0);
+
 begin
-sync:process(clk, reset)
-    begin
-    if(reset = '1') then
-        output <= (others => '0');
-    elsif (rising_edge(clk)) then
-        output <= rez;
-    end if;
-    end process;
-process(a,b,oper)
+process(clk,reset)
   begin
---  if (en = '1') then
-    case oper is
-        when "10" => rez <= a + b;
-        when "01" => rez <= a - b;
-        when others => rez <= (others => '0');
-    end case;
-    --end if;
+    if (reset = '1') then 
+      result <= (others => '0');
+    elsif (clk'event and clk = '1') then
+      if (op = "00") then
+        result  <= std_logic_vector(unsigned(a) + unsigned(b));
+      elsif (op = "01") then
+        result  <= std_logic_vector(unsigned(a) - unsigned(b));
+      elsif (op = "10") then
+        result_temp  <= std_logic_vector(unsigned(a) * unsigned(b));
+        result <= result_temp(7 downto 0);
+      elsif (op = "11") then
+        result_temp  <= std_logic_vector(unsigned("00000000" & a) / unsigned("00000000" & b));
+        result <= result_temp(7 downto 0);
+      end if;
+    end if;
   end process;
-end arch;
+end beh;

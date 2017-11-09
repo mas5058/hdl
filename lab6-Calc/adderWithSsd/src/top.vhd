@@ -50,14 +50,14 @@ end component;
 
 component alu is
   port (
-    a              : in std_logic_vector(7 downto 0); 
-    b              : in std_logic_vector(7 downto 0);
-    oper           : in  std_logic_vector(1 downto 0);
-    clk            : in std_logic;
-    reset          : in std_logic;
-    output         : out std_logic_vector(7 downto 0)
+    clk           : in  std_logic;
+    reset         : in  std_logic;
+    a             : in  std_logic_vector(7 downto 0); 
+    b             : in  std_logic_vector(7 downto 0);
+    op            : in  std_logic_vector(1 downto 0); -- 00: add, 01: sub, 10: mult, 11: div
+    result        : out std_logic_vector(7 downto 0)
   );  
-end component;
+end component;  
 
 component risingEdgeSynch is
   port (
@@ -115,8 +115,8 @@ addersub: alu
   port map(
     a         => asig,
     b         => bsig,
-    clk         => clk,
-    reset         => reset,
+    clk       => clk,
+    reset     => reset,
     oper      => opersig,
     output    => rez
   );
