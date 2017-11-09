@@ -19,6 +19,16 @@ end top;
 
 architecture beh of top is
 
+component memory is 
+  port (
+    clk               : in std_logic;
+    we                : in std_logic;
+    addr              : in std_logic_vector(addr_width - 1 downto 0);
+    din               : in std_logic_vector(data_width - 1 downto 0);
+    dout              : out std_logic_vector(data_width - 1 downto 0)
+  );
+end component;
+
 component doubledabble is
   port (
     binIn             : in  std_logic_vector(11 downto 0); 
@@ -71,7 +81,7 @@ end component;
 signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) := (others => '0');
 signal opersig                                  : std_logic_vector(1 downto 0) := (others => '0');
 signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
-signal rezPad                            : std_logic_vector(11 downto 0):= (others => '0');
+signal rezPad                                   : std_logic_vector(11 downto 0):= (others => '0');
 begin
 
 
