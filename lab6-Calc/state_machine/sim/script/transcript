@@ -167,3 +167,5 @@ do sim.do
 # Loading work.state_machine_tb(beh)
 # ** Warning: (vsim-3473) Component instance "uut : top" is not bound.
 #    Time: 0 ns  Iteration: 0  Instance: /state_machine_tb File: ../src/state_machine_tb.vhd
+# End time: 18:25:16 on Nov 07,2017, Elapsed time: 1:34:35
+# Errors: 0, Warnings: 2

@@ -117,8 +117,8 @@ addersub: alu
     b         => bsig,
     clk       => clk,
     reset     => reset,
-    oper      => opersig,
-    output    => rez
+    op      => opersig,
+    result    => rez
   );
 
 process (clk, reset,rezPad,opersig)
