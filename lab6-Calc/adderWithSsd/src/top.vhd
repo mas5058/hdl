@@ -9,6 +9,7 @@ entity top is
   port (
     clk             : in  std_logic; 
     reset           : in  std_logic;
+    we              : in  std_logic;
     stateChange     : in  std_logic;
     input           : in  std_logic_vector(7 downto 0);
     hex0            : out std_logic_vector(6 downto 0);
@@ -20,6 +21,8 @@ end top;
 architecture beh of top is
 
 component memory is 
+  generic (addr_width : integer := 10;
+           data_width : integer := 10);
   port (
     clk               : in std_logic;
     we                : in std_logic;
@@ -62,12 +65,12 @@ component alu is
   port (
     clk           : in  std_logic;
     reset         : in  std_logic;
-    a             : in  std_logic_vector(7 downto 0); 
-    b             : in  std_logic_vector(7 downto 0);
+    a             : in  std_logic_vector(9 downto 0); 
+    b             : in  std_logic_vector(9 downto 0);
     op            : in  std_logic_vector(1 downto 0); -- 00: add, 01: sub, 10: mult, 11: div
-    result        : out std_logic_vector(7 downto 0)
+    result        : out std_logic_vector(9 downto 0)
   );  
-end component;  
+end component;   
 
 component risingEdgeSynch is
   port (
@@ -82,12 +85,23 @@ signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) :
 signal opersig                                  : std_logic_vector(1 downto 0) := (others => '0');
 signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
 signal rezPad                                   : std_logic_vector(11 downto 0):= (others => '0');
+signal memPad                                   : std_logic_vector(11 downto 0):= (others => '0');
 begin
 
-
+mem: memory
+    port map(
+    clk => clk,
+    we => we,
+    addr => open,
+    --ask about addr
+    din => rezpad,
+    clk => clk,
+    dout =>
+    --thousands => open
+    );
 dd: doubledabble
     port map(
-    binIn => rezPad,
+    binIn => memPad,
     ones => oneSig,
     tens => tenSig,
     hundreds => Hundsig

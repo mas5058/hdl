@@ -7,8 +7,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity memory is 
-  generic (addr_width : integer := 2;
-           data_width : integer := 4);
+  generic (addr_width : integer := 10;
+           data_width : integer := 10);
   port (
     clk               : in std_logic;
     we                : in std_logic;
