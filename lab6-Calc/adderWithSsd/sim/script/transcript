@@ -14,27 +14,27 @@
 # do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:14 on Nov 09,2017
+# Start time: 16:14:28 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity state_machine
 # -- Compiling architecture beh of state_machine
-# End time: 16:53:15 on Nov 09,2017, Elapsed time: 0:00:01
+# End time: 16:14:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:15 on Nov 09,2017
+# Start time: 16:14:28 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ssd
 # -- Compiling architecture beh of ssd
-# End time: 16:53:15 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:14:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:15 on Nov 09,2017
+# Start time: 16:14:28 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -42,10 +42,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture beh of alu
-# End time: 16:53:15 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:14:28 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:15 on Nov 09,2017
+# Start time: 16:14:28 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -53,81 +53,19 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity doubledabble
 # -- Compiling architecture arch of doubledabble
-# End time: 16:53:15 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:14:29 on Nov 14,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:15 on Nov 09,2017
+# Start time: 16:14:29 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture beh of top
-# ** Error: ../../src/top.vhd(120): (vcom-1484) Unknown formal identifier "oper".
-# ** Error: ../../src/top.vhd(121): (vcom-1484) Unknown formal identifier "output".
-# ** Error: ../../src/top.vhd(144): VHDL Compiler exiting
-# End time: 16:53:16 on Nov 09,2017, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-# ** Error: c:/software/mentorgraphics/win64/vcom failed.
-# Error in macro ./sim.do line 6
-# c:/software/mentorgraphics/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work ../../src/top.vhd"
-do sim.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:43 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity state_machine
-# -- Compiling architecture beh of state_machine
-# End time: 16:53:43 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:43 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ssd
-# -- Compiling architecture beh of ssd
-# End time: 16:53:43 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:43 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity alu
-# -- Compiling architecture beh of alu
-# End time: 16:53:43 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:43 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity doubledabble
-# -- Compiling architecture arch of doubledabble
-# End time: 16:53:43 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:53:43 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top
-# -- Compiling architecture beh of top
-# ** Error: ../../src/top.vhd(121): (vcom-1484) Unknown formal identifier "output".
-# ** Error: ../../src/top.vhd(144): VHDL Compiler exiting
-# End time: 16:53:43 on Nov 09,2017, Elapsed time: 0:00:00
+# ** Error: ../../src/top.vhd(95): (vcom-1035) Formal port "addr" has OPEN or no actual associated with it.
+# ** Error: ../../src/top.vhd(168): VHDL Compiler exiting
+# End time: 16:14:29 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 2, Warnings: 0
 # ** Error: c:/software/mentorgraphics/win64/vcom failed.
 # Error in macro ./sim.do line 6
@@ -137,27 +75,27 @@ do sim.do
 do sim.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:02 on Nov 09,2017
+# Start time: 16:16:19 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity state_machine
 # -- Compiling architecture beh of state_machine
-# End time: 16:54:02 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:16:19 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:02 on Nov 09,2017
+# Start time: 16:16:19 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ssd
 # -- Compiling architecture beh of ssd
-# End time: 16:54:02 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:16:19 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:02 on Nov 09,2017
+# Start time: 16:16:19 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -165,10 +103,10 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture beh of alu
-# End time: 16:54:02 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:16:19 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:03 on Nov 09,2017
+# Start time: 16:16:19 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -176,51 +114,22 @@ do sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity doubledabble
 # -- Compiling architecture arch of doubledabble
-# End time: 16:54:03 on Nov 09,2017, Elapsed time: 0:00:00
+# End time: 16:16:19 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:03 on Nov 09,2017
+# Start time: 16:16:19 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture beh of top
-# End time: 16:54:03 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 16:54:03 on Nov 09,2017
-# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity top_tb
-# -- Compiling architecture beh of top_tb
-# ** Warning: ../src/top_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../src/top_tb.vhd(64): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# End time: 16:54:03 on Nov 09,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# vsim -novopt top_tb 
-# Start time: 16:54:04 on Nov 09,2017
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading std.standard
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.top_tb(beh)
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.top_tb(beh)
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.top(beh)
-# Loading work.top(beh)
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.doubledabble(arch)
-# Loading ieee.numeric_std(body)
-# Loading work.doubledabble(arch)
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.state_machine(beh)
-# Loading work.state_machine(beh)
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.ssd(beh)
-# Loading work.ssd(beh)
-# Refreshing S:/hdl/lab6-Calc/adderWithSsd/sim/script/work.alu(beh)
-# Loading work.alu(beh)
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: mas5058  Hostname: ECTET-1360-12  ProcessID: 6484
-#           Attempting to use alternate WLF file "./wlftkt48cn".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftkt48cn
+# ** Error: ../../src/top.vhd(95): (vcom-1035) Formal port "addr" has OPEN or no actual associated with it.
+# ** Error: ../../src/top.vhd(168): VHDL Compiler exiting
+# End time: 16:16:20 on Nov 14,2017, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: c:/software/mentorgraphics/win64/vcom failed.
+# Error in macro ./sim.do line 6
+# c:/software/mentorgraphics/win64/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/top.vhd"

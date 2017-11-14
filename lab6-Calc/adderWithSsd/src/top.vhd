@@ -41,7 +41,7 @@ component doubledabble is
     --thousands         : out std_logic_vector (3 downto 0)
   );  
 end component; 
-
+--rez
 component ssd is
   port (
     input                 : in  std_logic_vector(3 downto 0); 
@@ -65,10 +65,10 @@ component alu is
   port (
     clk           : in  std_logic;
     reset         : in  std_logic;
-    a             : in  std_logic_vector(9 downto 0); 
-    b             : in  std_logic_vector(9 downto 0);
+    a             : in  std_logic_vector(7 downto 0); 
+    b             : in  std_logic_vector(7 downto 0);
     op            : in  std_logic_vector(1 downto 0); -- 00: add, 01: sub, 10: mult, 11: div
-    result        : out std_logic_vector(9 downto 0)
+    result        : out std_logic_vector(7 downto 0)
   );  
 end component;   
 
@@ -92,11 +92,11 @@ mem: memory
     port map(
     clk => clk,
     we => we,
-    addr => open,
+    addr => OPEN,
     --ask about addr
     din => rezpad,
-    clk => clk,
-    dout =>
+    --clk => clk,
+    dout => open
     --thousands => open
     );
 dd: doubledabble
