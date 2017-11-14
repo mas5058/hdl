@@ -71,7 +71,7 @@ end component;
 signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) := (others => '0');
 signal opersig                                  : std_logic_vector(1 downto 0) := (others => '0');
 signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
-signal rezPad                            : std_logic_vector(11 downto 0):= (others => '0');
+signal rezPad                                   : std_logic_vector(11 downto 0):= (others => '0');
 begin
 
 
@@ -115,8 +115,8 @@ addersub: alu
   port map(
     a         => asig,
     b         => bsig,
-    clk         => clk,
-    reset         => reset,
+    clk       => clk,
+    reset     => reset,
     oper      => opersig,
     output    => rez
   );

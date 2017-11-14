@@ -1,40 +1,26 @@
-# //  ModelSim SE-64 10.5b May 21 2016
-# //
-# //  Copyright 1991-2016 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  ModelSim SE-64 and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
 # do sim.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:05 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity state_machine
 # -- Compiling architecture beh of state_machine
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:06 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ssd
 # -- Compiling architecture beh of ssd
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:06 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -44,10 +30,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture arch of alu
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:06 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -55,20 +41,20 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity doubledabble
 # -- Compiling architecture arch of doubledabble
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:06 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture beh of top
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:07 on Nov 14,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
-# Start time: 17:05:35 on Nov 07,2017
+# Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+# Start time: 15:43:07 on Nov 14,2017
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -77,35 +63,41 @@
 # -- Compiling architecture beh of top_tb
 # ** Warning: ../src/top_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: ../src/top_tb.vhd(64): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# End time: 17:05:35 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 15:43:07 on Nov 14,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # vsim -novopt top_tb 
-# Start time: 17:05:36 on Nov 07,2017
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Start time: 15:43:07 on Nov 14,2017
+# //  ModelSim DE-64 10.6c Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
 # Loading std.standard
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.top_tb(beh)
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.top_tb(beh)
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.top(beh)
 # Loading work.top(beh)
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.doubledabble(arch)
 # Loading ieee.numeric_std(body)
 # Loading work.doubledabble(arch)
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.state_machine(beh)
 # Loading work.state_machine(beh)
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.ssd(beh)
 # Loading work.ssd(beh)
-# Refreshing S:/hdl/lab5State/adderWithSsd/sim/script/work.alu(arch)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_signed(body)
 # Loading work.alu(arch)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: mas5058  Hostname: ECTET-1360-12  ProcessID: 6484
-#           Attempting to use alternate WLF file "./wlfthgdcaq".
+#           Attempting to use alternate WLF file "./wlftysm20a".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfthgdcaq
+#           Using alternate file: ./wlftysm20a
 # Break key hit
 # Break in Process stateChanproc at ../src/top_tb.vhd line 64
-# End time: 17:07:51 on Nov 07,2017, Elapsed time: 0:02:15
-# Errors: 0, Warnings: 3
+# End time: 15:43:18 on Nov 14,2017, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 2
