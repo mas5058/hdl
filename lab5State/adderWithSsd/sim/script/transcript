@@ -1,26 +1,26 @@
 # do sim.do
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:05 on Nov 14,2017
+# Start time: 11:30:36 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../../src/state_machine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity state_machine
 # -- Compiling architecture beh of state_machine
-# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:01
+# End time: 11:30:36 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:06 on Nov 14,2017
+# Start time: 11:30:36 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../../src/ssd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ssd
 # -- Compiling architecture beh of ssd
-# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
+# End time: 11:30:36 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:06 on Nov 14,2017
+# Start time: 11:30:36 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../../src/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -30,10 +30,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture arch of alu
-# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
+# End time: 11:30:36 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:06 on Nov 14,2017
+# Start time: 11:30:36 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../../src/doubledabble.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -41,20 +41,20 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity doubledabble
 # -- Compiling architecture arch of doubledabble
-# End time: 15:43:06 on Nov 14,2017, Elapsed time: 0:00:00
+# End time: 11:30:37 on Nov 16,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:06 on Nov 14,2017
+# Start time: 11:30:37 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity top
 # -- Compiling architecture beh of top
-# End time: 15:43:07 on Nov 14,2017, Elapsed time: 0:00:01
+# End time: 11:30:37 on Nov 16,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
-# Start time: 15:43:07 on Nov 14,2017
+# Start time: 11:30:37 on Nov 16,2017
 # vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -62,11 +62,10 @@
 # -- Compiling entity top_tb
 # -- Compiling architecture beh of top_tb
 # ** Warning: ../src/top_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../src/top_tb.vhd(64): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# End time: 15:43:07 on Nov 14,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
+# End time: 11:30:37 on Nov 16,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # vsim -novopt top_tb 
-# Start time: 15:43:07 on Nov 14,2017
+# Start time: 11:30:37 on Nov 16,2017
 # //  ModelSim DE-64 10.6c Jul 26 2017
 # //
 # //  Copyright 1991-2017 Mentor Graphics Corporation
@@ -94,10 +93,8 @@
 # Loading work.alu(arch)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: mas5058  Hostname: ECTET-1360-12  ProcessID: 6484
-#           Attempting to use alternate WLF file "./wlftysm20a".
+#           Attempting to use alternate WLF file "./wlftg3q7iy".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftysm20a
-# Break key hit
-# Break in Process stateChanproc at ../src/top_tb.vhd line 64
-# End time: 15:43:18 on Nov 14,2017, Elapsed time: 0:00:11
+#           Using alternate file: ./wlftg3q7iy
+# End time: 11:30:58 on Nov 16,2017, Elapsed time: 0:00:21
 # Errors: 0, Warnings: 2

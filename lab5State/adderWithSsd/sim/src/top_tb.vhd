@@ -60,6 +60,7 @@ end process;
     
 stateChanproc: process
  begin
+    wait for 2 * period;
     stateChange <= not stateChange;
 end process;
 main: process 
