@@ -12,8 +12,7 @@ entity state_machine is
     execute           : in std_logic;
     ms                : in std_logic;
     mr                : in std_logic;
-    en                : out std_logic_vector(3 downto 0)
-    --each bit is an enable for a state
+    en                : out std_logic_vector(4 downto 0)
   );
 end state_machine;
 
@@ -49,22 +48,25 @@ begin
     when read_write =>
       if (execute = '1') then  
         state_next <= writeNoper;
-        en <= "0001";
       elsif ms = '1') then
         state_next <= write_s;
       elsif mr = '1') then
         state_next <= read_s;
       else
         state_next <= read_write;
-      end if;  
+     end if;
     when writeNoper=>
         state_next <= writeCoper;
+        en <= "00010"; 
     when writeCoper =>
         state_next <= read_write;
+        en <= "00100";
     when write_s =>
         state_next <= read_write;
+        en <= "01000"; 
     when read_s =>
         state_next <= writeNoper;
+        en <= "10000";
     when others =>
       state_next <= read_write;
   end case;
