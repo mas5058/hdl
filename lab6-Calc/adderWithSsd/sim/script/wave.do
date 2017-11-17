@@ -15,7 +15,9 @@ radix define States {
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /top_tb/clk
 add wave -noupdate /top_tb/reset
-add wave -noupdate /top_tb/stateChange
+add wave -noupdate /top_tb/execute
+add wave -noupdate /top_tb/mr
+add wave -noupdate /top_tb/ms
 add wave -noupdate /top_tb/input
 add wave -noupdate /top_tb/hex0
 add wave -noupdate /top_tb/hex1

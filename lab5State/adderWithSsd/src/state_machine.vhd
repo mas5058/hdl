@@ -9,20 +9,18 @@ entity state_machine is
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    execute           : in std_logic;
-    ms                : in std_logic;
-    mr                : in std_logic;
-    en                : out std_logic_vector(4 downto 0)
+    stateChange    : in std_logic;
+    en          : out std_logic_vector(3 downto 0)
+    --each bit is an enable for a state
   );
 end state_machine;
 
 architecture beh of state_machine is
 -- signal declarations
-constant read_write      : std_logic_vector(3 downto 0) := "0000";
-constant writeNoper      : std_logic_vector(3 downto 0) := "0100";
-constant writeCoper      : std_logic_vector(3 downto 0) := "0101";
-constant write_s         : std_logic_vector(3 downto 0) := "0111";
-constant read_s          : std_logic_vector(3 downto 0) := "0001";
+constant input_a        : std_logic_vector(3 downto 0) := "0001";
+constant input_b        : std_logic_vector(3 downto 0) := "0010";
+constant disp_sum      : std_logic_vector(3 downto 0) := "0110";
+constant disp_diff        : std_logic_vector(3 downto 0) := "0101";
 
 
 signal state_reg      : std_logic_vector(3 downto 0);
@@ -33,7 +31,7 @@ begin
 process(clk,reset)
 begin 
   if (reset = '1') then 
-    state_reg <= read_write;
+    state_reg <= input_a;
   elsif (clk'event and clk = '1') then
     state_reg <= state_next;
   end if;
@@ -45,30 +43,36 @@ begin
   -- default values
   state_next <= state_reg;    -- prevents a latch
   case state_reg is  
-    when read_write =>
-      if (execute = '1') then  
-        state_next <= writeNoper;
-      elsif ms = '1') then
-        state_next <= write_s;
-      elsif mr = '1') then
-        state_next <= read_s;
+    when input_a =>
+      if (stateChange = '1') then  
+        state_next <= input_b;
+        en <= "0001";
       else
-        state_next <= read_write;
-     end if;
-    when writeNoper=>
-        state_next <= writeCoper;
-        en <= "00010"; 
-    when writeCoper =>
-        state_next <= read_write;
-        en <= "00100";
-    when write_s =>
-        state_next <= read_write;
-        en <= "01000"; 
-    when read_s =>
-        state_next <= writeNoper;
-        en <= "10000";
+        state_next <= input_a;
+      end if;  
+    when input_b=>
+      if (stateChange = '1') then  
+        state_next <= disp_sum;
+        en <= "0010";
+      else
+        state_next <= input_b;
+      end if;  
+    when disp_sum =>
+      if (stateChange = '1') then  
+        state_next <= disp_diff;
+        en <= "0100";
+      else
+        state_next <= disp_sum;
+      end if;
+    when disp_diff =>
+      if (stateChange = '1') then  
+        state_next <= input_a;
+        en <= "1000";
+      else
+        state_next <= disp_diff;
+      end if;
     when others =>
-      state_next <= read_write;
+      state_next <= input_a;
   end case;
 end process;
 end beh; 

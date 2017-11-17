@@ -10,7 +10,6 @@ entity top is
     clk             : in  std_logic; 
     reset           : in  std_logic;
     execute         : in  std_logic;
-    we              : in  std_logic;
     mr              : in  std_logic;
     ms              : in  std_logic;
     input           : in  std_logic_vector(7 downto 0);
@@ -20,6 +19,8 @@ entity top is
     hex2            : out std_logic_vector(6 downto 0)
   );
 end top;
+
+--we is not an input, but something generated with state machine
 
 architecture beh of top is
 
@@ -58,11 +59,14 @@ component state_machine is
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    stateChange       : in std_logic;
-    en                : out std_logic_vector(3 downto 0)
-    --each bit is an enable for a state
+    execute           : in std_logic;
+    ms                : in std_logic;
+    mr                : in std_logic;
+    we                : out std_logic;
+    en                : out std_logic_vector(4 downto 0)
   );
 end component;
+
 
 component alu is
   port (
@@ -84,23 +88,25 @@ component risingEdgeSynch is
   );  
 end component;
 
-signal en,oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) := (others => '0');
+signal oneSig,tenSig,Hundsig                 : std_logic_vector(3 downto 0) := (others => '0');
+signal en                 : std_logic_vector(4 downto 0) := (others => '0');
 signal opersig                                  : std_logic_vector(1 downto 0) := (others => '0');
 signal rez,asig,bsig                            : std_logic_vector(7 downto 0):= (others => '0');
 signal rezPad                                   : std_logic_vector(11 downto 0):= (others => '0');
 signal memPad                                   : std_logic_vector(11 downto 0):= (others => '0');
-signal addrsig                                   : std_logic_vector(9 downto 0):= (others => '0');
+signal addrsig                                  : std_logic_vector(9 downto 0):= (others => '0');
+signal weSig                                       : std_logic;
 begin
 
 mem: memory
     port map(
     clk => clk,
-    we => we,
-    addr => addersig,
+    we => weSig,
+    addr => addrsig,
     --ask about addr
     din => rezpad,
     --clk => clk,
-    dout => open
+    dout => asig
     --thousands => open
     );
 dd: doubledabble
@@ -113,7 +119,10 @@ dd: doubledabble
     );
 sta: state_machine
   port map(
-    stateChange     => stateChange,
+    execute         => execute,
+    ms              => ms,
+    we => weSig,
+    mr              => mr,
     clk             => clk,
     reset           => reset,
     en              => en
@@ -142,12 +151,24 @@ sta: state_machine
 addersub: alu
   port map(
     a         => asig,
-    b         => bsig,
+    b         => input,
     clk       => clk,
     reset     => reset,
-    op      => opersig,
+    op        => opersig,
     result    => rez
   );
+  
+devito:process(clk,en)
+--you gotta pay the troll toll
+begin
+    if (rising_edge(clk)) then
+        if (en = "00010") then
+            memPad <= rezPad;
+        elsif(en = "10000") then
+            memPad <= asig;
+        end if;
+    end if;
+end process;
 
 process (clk, reset,rezPad,opersig)
 begin
@@ -155,18 +176,18 @@ if (reset = '1') then
     rezPad <= (others => '0');
     opersig <= (others => '0');
 elsif (rising_edge(clk)) then
-    opersig <= en(1) & en(0);
+    opersig <= oper;
     rezPad <= "0000" & rez;
 end if;
 end process;
-process(en,asig,bsig,input)
-begin
-    case en is 
-        when "0001" => asig <= input;
-        when "0010" => bsig <= input;
-        when others => 
-            asig <= asig;
-            bsig <= bsig;
-        end case;
-        end process;
-    end beh;
+-- process(en,asig,bsig,input)
+-- begin
+    -- case en is 
+        -- when "0001" => asig <= input;
+        -- when "0010" => bsig <= input;
+        -- when others => 
+            -- asig <= asig;
+            -- bsig <= bsig;
+        -- end case;
+        -- end process;
+     end beh;

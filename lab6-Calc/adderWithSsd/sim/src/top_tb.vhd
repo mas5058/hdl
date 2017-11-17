@@ -14,8 +14,11 @@ component top is
   port (
     clk             : in  std_logic; 
     reset           : in  std_logic;
-    stateChange     : in  std_logic;
+    execute         : in  std_logic;
+    mr              : in  std_logic;
+    ms              : in  std_logic;
     input           : in  std_logic_vector(7 downto 0);
+    oper            : in  std_logic_vector(1 downto 0);
     hex0            : out std_logic_vector(6 downto 0);
     hex1            : out std_logic_vector(6 downto 0);
     hex2            : out std_logic_vector(6 downto 0)
@@ -25,7 +28,9 @@ end component;
 constant period         : time := 20ns;                                              
 signal clk              : std_logic := '0';
 signal reset            : std_logic := '1';
-signal stateChange      : std_logic := '0';
+signal execute      : std_logic := '0';
+signal mr            : std_logic_vector(7 downto 0) := (others => '0');
+signal ms            : std_logic_vector(7 downto 0) := (others => '0');
 signal input            : std_logic_vector(7 downto 0) := (others => '0');
 signal hex0             : std_logic_vector(6 downto 0) := (others => '0');
 signal hex1             : std_logic_vector(6 downto 0) := (others => '0');
@@ -36,7 +41,10 @@ uut: top
   port map(
     clk               => clk,
     reset             => reset,
-    stateChange       => stateChange,
+    execute             => execute,
+    mr             => mr,
+    ms             => ms,
+    oper                => oper,
     input             => input,
     hex0              => hex0,
     hex1              => hex1,
