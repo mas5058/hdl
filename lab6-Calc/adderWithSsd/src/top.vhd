@@ -154,18 +154,17 @@ addersub: alu
     b         => input,
     clk       => clk,
     reset     => reset,
-    op        => opersig,
+    op        => oper,
     result    => rez
   );
   
-devito:process(clk,en)
---you gotta pay the troll toll
+trollToll:process(clk,en)
 begin
     if (rising_edge(clk)) then
         if (en = "00010") then
             memPad <= rezPad;
         elsif(en = "10000") then
-            memPad <= asig;
+            memPad <= "0000" & asig;
         end if;
     end if;
 end process;
