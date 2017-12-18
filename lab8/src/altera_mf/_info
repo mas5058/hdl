@@ -927,9 +927,10 @@ R20
 Paltera_mf_components
 R4
 R5
-R25
+OV;C;10.5b;63
 31
 !s110 1445085629
+R25
 w1371091749
 R0
 8c:/altera/13.0sp1/quartus/eda/sim_lib/altera_mf_components.vhd

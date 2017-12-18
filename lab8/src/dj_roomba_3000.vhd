@@ -1,6 +1,3 @@
--- Dr. Kaputa
--- Lab 8: DJ Roomba 3000 
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

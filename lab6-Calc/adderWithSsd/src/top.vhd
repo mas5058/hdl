@@ -4,19 +4,21 @@
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity top is
   port (
+    input           : in  std_logic_vector(7 downto 0);
+    oper            : in  std_logic_vector(1 downto 0);
     clk             : in  std_logic; 
     reset           : in  std_logic;
     execute         : in  std_logic;
     mr              : in  std_logic;
     ms              : in  std_logic;
-    input           : in  std_logic_vector(7 downto 0);
-    oper            : in  std_logic_vector(1 downto 0);
     hex0            : out std_logic_vector(6 downto 0);
     hex1            : out std_logic_vector(6 downto 0);
     hex2            : out std_logic_vector(6 downto 0)
+    led            : out std_logic_vector(4 downto 0)
   );
 end top;
 
@@ -25,8 +27,8 @@ end top;
 architecture beh of top is
 
 component memory is 
-  generic (addr_width : integer := 10;
-           data_width : integer := 10);
+  generic (addr_width : integer := 4;
+           data_width : integer := 8);
   port (
     clk               : in std_logic;
     we                : in std_logic;
